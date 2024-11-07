@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My portfolio website">
+    <meta name="keywords" content="web design, htmls, css, js">
+    <title>Michal Fusko</title>
+  </head>
+  <body>
+
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">O mne</a>
+          </li>
+          <li>
+            <a class="header__link" href="#work">Projekty</a>
+          </li>
+          <li>
+            <a class="header__link" href="#contact">Kontakt</a>
+          </li>
+          <li class="header__line"></li>
+          <li>
+            <button aria-label="theme-toggle btn" id="theme-toggle" class="header__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="header__resume btn" href="/resume.pdf">Životopis</a>
+          </li>
+        </ul>
+        <button aria-label="mobile nav button" class="header__bars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+          </svg>
+          
+        </button>
+      </nav>
+    </header>
+    <!-- Mobile Navigation-->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li>
+            <a href="#about" class="mobile-nav__link">O mne</a>
+          </li>
+          <li>
+            <a href="#featured" class="mobile-nav__link">Projekty</a>
+          </li>
+          <li>
+            <a href="#contact" class="mobile-nav__link">Kontakt</a>
+          </li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button aria-label="theme-toggle btn" id="theme-toggle" class="mobile-nav__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a href="#" class="mobile-nav__btn btn">Životopis</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End of Mobile Navigation-->
+
+    <main>
+      <section class="hero container">
+        <img class="hero__img" src="/hero.jpg" alt="Profile picture">
+        <h2 class="hero__subtitle">Zdravím, ja som Michal!</h2>
+        <h1 class="hero__title">FRONT-END <br> WEB DEVELOPER.</h1>
+        <p class="hero__description">Začínajúci <strong>Front-end</strong> web developer so základnými znalosťami JS <strong>React</strong>, mám skúsenosť s <strong>CSS</strong> frameworkmi/knižnicami ako <strong>TailWindCSS</strong>, alebo <strong>MUI</strong> a aktuálne sa učím s <strong>TypeScriptom</strong>. </p>
+        <!-- <a class="hero__btn btn" href="">Reach out</a> -->
+      </section>
+      <section id="about" class="about container section">
+        <div class="about__content">
+          <h2 class="about__title">O mne</h2>
+          <div class="about_location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="about__description">Brno</p>
+          </div>
+          <p class="about__description">Front-endu som sa začal venovať tento rok, keď som minulým rokom skončil v práci v gastre. Vyskúšal som si viacero on-line kurzov a tutoriálov vo forme youtube videí. Najviac si rozumiem s HTML a CSS, React je pre mňa stále otvorená kniha plná noviniek a možností, s ktorou som sa už ale docela dobre zoznámil.
+            <br>Aby som sa pri tom nenudil, ale hlavne aby kód stál za to som sa začal učiť s TypeScriptom. </p>
+          <p class="about__description">Skúsil som si:</p>
+          <ul class="about__description">
+            <li>"Webrebell" kurz od <a href="https://www.youtube.com/@RobWebSK">"Yablka"</a>  na <a href="https://skillmea.cz/online-kurzy/webrebel-1-html-css-javascript">Skillmea</a>.</li>
+            <li>Youtube tutoriály ktoré by som odporučil každému začiatočníkovi:
+              <br> <a href="https://www.youtube.com/@hacknisvoubudoucnost">"David Šetek"</a>.</li>
+            <li>Kurzy "Complete Intro To React, v8" a "TypeScript 5+ Fundamentals, v4" na <a href="https://frontendmasters.com/">FrontendMasters</a></li>
+        </ul>
+          <p class="about__description">Učenie doma mi ale moc nevyhovuje a často sa v tom strácam. Neviem si povedať v čom už som dobrý a čomu by som mal naopak venovať pozornosť. Preto si hľadám prácu, kde by som si mohol menej vyberať a viac sa venovať niečomu konkrétnemu pod dohľadom niekoho skúseného.</p>
+          <p class="about__description">Okrem kódenia si rád zašportujem s kamošmi, zájdem si do fitka, alebo prírody. Milujem hudbu a večer si rád zahrám nejakú hru alebo po novom prečítam knižku.</p>
+          <p class="about__description">Pre pohodu Michala v prítomnosti sa starám o pokojové rasliny a pre pohodu Michala v budúcnosti sa venujem investíciam.</p>
+
+          <hr class="about__hr">
+          <h3 class="about__subtitle">Môj tech-stack</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">JavaScript</li>
+              <li class="about__list">CSS</li>
+              <li class="about__list">HTML</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">ReactJS</li>
+              <li class="about__list">TailwindCSS, MUI</li>
+              <li class="about__list">TypeScript</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__img-wrapper">
+          <img class="about__img lazy loading" src="https://fakeimg.pl/1125" data-src="/about.jpg" alt="Profile picture">
+        </div>
+      </section>
+      
+      <section class="work container section" id="work">
+        <h2 class="work__title">Projekty</h2>
+        <p class="work__description">Zatiaľ som nevytvoril nejaký veľký projekt, ktorý by som mohol ukázať, ale tu sú aplikácie pri ktorých som sa naučil to čo viem.</p>
+        <h2>Aktuálne pracujem na spotify appke</h2>
+        <p class="work__description">Spotify mi appku na personal use dovolí len v development móde.
+          <br>Ak by ste si chceli appku skúsiť pošlite mi prosím celé meno a mail a rád vás do appky pridám.
+          
+        </p>
+        <div class="work__container">
+          <!-- Project 1-->
+          <h3 class="work__project-title">Spotify API Randomizer</h3>
+          <a href="https://randomizer-app.vercel.app/">
+            <div class="work__img-wrapper work__image1">  
+              <img class="lazy loading"  data-src="/spotify-app.png" alt="Projekt 1">
+            </div>
+          </a>
+          <div class="work__project work__content1">
+            <h3 class="work__project-subtitle">Spotify API Randomizer</h3>
+            <p class="work__project-description1">Responzívna appka ktorá použivateľovi pomôže s náhodným výberom albumov/plalistov/podcastov.
+              <br> V appke zatiaľ možno vybrať náhodné z uložených itemov usera okrem artistov, tí fungujú na pagination a musím im spraviť iné UI. 
+              <br>Ďalej by som chcel appku otypovať, aby som si precvičil TypeScript a pridať možnosti vyberať úplne random, nie len z uložených, prípadne nejaký search a selection.
+              <br>Spotify endpoint na playlisty bohužial funguje len na playlisty vytvorené userom.
+            </p>
+            <ul class="work__project-description2">
+              <li class="work__project-description2">
+                CSS-MUI
+              </li>
+              <li class="work__project-description2">
+                REACT
+              </li>
+            </ul>
+            <a href="https://github.com/michalFusko/SpotifyRandomizerApp" class="btn work__project-btn">Github-code</a>
+          </div>
+
+          <!-- Project 2-->
+          <h3 class="work__project-title">React To-Do App</h3>
+          <a href="https://react-to-do-app-liart-two.vercel.app/">
+            <div class="work__img-wrapper  work__image2">  
+              <img class="lazy loading"  data-src="/todo-app.png" alt="Projekt 2">
+            </div>
+          </a>
+          <div class="work__project work__content2">
+            <h3 class="work__project-subtitle">React To-Do App</h3>
+            <p class="work__project-description1">Klasická responzívna todo appka v ktorej možno pridať tasky, následne ich upraviť, označiť ako dokončené, alebo zahodiť.
+              <br>V appke sa tiež dá tasky filtrovať a ďalej by som chcel pridať možnosti zoradenia podľa kategórií(práca/záľuby..) a deadliny.
+            </p>
+            <ul class="work__project-description2">
+              <li class="work__project-description2">
+                CSS
+              </li>
+              <li class="work__project-description2">
+                REACT
+              </li>
+            </ul>
+            <a href="https://github.com/michalFusko/ReactToDoApp" class="btn work__project-btn">Github-code</a>
+          </div>
+
+          <!-- Project 3-->
+          <h3 class="work__project-title">JS Carousel</h3>
+          <a href="https://carousel-slider-liard.vercel.app/">
+            <div class="work__img-wrapper  work__image3">  
+              <img class="lazy loading"  data-src="/js-carousel-scshot.png" alt="Projekt 3">
+            </div>
+          </a>
+          <div class="work__project work__content3">
+            <h3 class="work__project-subtitle">JS Carousel</h3>
+            <p class="work__project-description1">Animácia na carousel slider.
+              <br>Niekedy keď nemám chuť robiť na appkách si vyskúšam niečo nové a zaujímavé.
+            </p>
+            <ul class="work__project-description2">
+              <li class="work__project-description2">
+                HTML
+              </li>
+              <li class="work__project-description2">
+                CSS
+              </li>
+              <li class="work__project-description2">
+                JavaScript
+              </li>
+            </ul>
+            <a href="https://github.com/michalFusko/CarouselSlider" class="btn work__project-btn">Github-code</a>
+          </div>
+
+          <!-- Project 4-->
+          <h3 class="work__project-title">React e-shop</h3>
+          <a href="https://fake-store-eshop.vercel.app/">
+            <div class="work__img-wrapper  work__image4">  
+              <img class="lazy loading"  data-src="/react-e-shop-scshot.png" alt="Projekt 4">
+            </div>
+          </a>
+          <div class="work__project work__content4">
+            <h3 class="work__project-subtitle">React e-shop</h3>
+            <p class="work__project-description1">Appka na Fake Store API, kde je zatiaľ spravený landing page, fungujú sekcie electronics a jewelery.
+              <br>Fake Store API ma moc nebavila, tak som začal robiť Spotify appku.
+              <br>Ak sa k tejto appke niekedy vrátim určite by som pridal košík, usera a opravil men's a women's sekcie.
+              </p>
+            <ul class="work__project-description2">
+              <li class="work__project-description2">
+                CSS-MUI
+              </li>
+              <li class="work__project-description2">
+                React
+              </li>
+            </ul>
+            <a href="https://github.com/michalFusko/FakeStoreEshop" class="btn work__project-btn">Github-code</a>
+          </div>
+
+          <!-- Project 5-->
+          <h3 class="work__project-title">Portfólio</h3>
+          <a href="https://tail-wind-portfolio.vercel.app/">
+            <div class="work__img-wrapper  work__image5">  
+              <img class="lazy loading"  data-src="/react-portfolio-scshot.png" alt="Projekt 5">
+            </div>
+          </a>
+          <div class="work__project work__content5">
+            <h3 class="work__project-subtitle">Portfólio</h3>
+            <p class="work__project-description1">Portfolio stránka pre demonštráciu TailWindCSS, kde som robil aj animáciu. 
+              <br> Sú tam len 2 sekcie.
+            </p>
+            <ul class="work__project-description2">
+              <li class="work__project-description2">
+                TailwindCSS
+              </li>
+              <li class="work__project-description2">
+                React
+              </li>
+            </ul>
+            <a href="https://github.com/michalFusko/TailWindPortfolio" class="btn work__project-btn">Github-code</a>
+          </div>
+        </div>
+      </section>
+      <section id="featured" class="featured container section">
+        <div class="featured__wrapper">
+          <h2 class="featured__title">Projekty ktoré mi toho moc (ne)dali</h2>
+        </div>
+        <p class="featured__description">Na týchto projektoch z youtube som si vyskúšal a osvojil tailwindCSS, čo sa ale týka reactu mi toho moc nedali, keďže tam človek len opisuje kód.</p>
+        <div class="featured__img-container">
+          <div>
+            <a href="https://j-smastery-react-tailwind-website.vercel.app/">
+              <div class="featured__img-wrapper">
+                <img class="lazy loading"  data-src="/react-bw-scshot.png" alt="web">
+              </div>
+            </a>
+            <div class="featured__project-btn-container">
+              <a href="https://github.com/michalFusko/brainwave-tailwind" class="btn">Github-code</a>
+            </div>
+          </div>
+          <div>
+            <a href="https://j-smastery-tailwind-css-website.vercel.app/">
+              <div class="featured__img-wrapper">
+                <img class="lazy loading"  data-src="/react-nike-scshot.png" alt="web">
+              </div>
+            </a>
+            <div class="featured__project-btn-container">
+              <a href="https://github.com/michalFusko/nike-tailwind" class="btn">Github-code</a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="contact" class="contact conatiner section">
+        <h2 class="contact__title">Ďakujem za zhliadnutie portfólia.</h2>  
+        <p class="contact__description">Ak si myslíte, že som vhodný kandidát na pozíciu ktorú hľadáte, rád sa s Vami uvidím na pohovore!</p>
+        <p class="contact__description">+420 605 029 680</p>
+        <p class="contact__description">m.fusko28@gmail.com</p>
+      </section>
+      
+    </main>
+    <footer class="footer conatiner section">
+      <h3 class="footer__title">~ Michal Fusko ~</h3>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://kit.fontawesome.com/b5c0383b48.js" crossorigin="anonymous"></script>
+  </body>
+</html>
